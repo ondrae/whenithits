@@ -1,0 +1,36 @@
+<html>
+<head>
+<script type="text/javascript" src="http://use.typekit.net/dbl3jza.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" />
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.ie.css" />
+<![endif]-->
+
+<script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script>
+
+</head>
+<body>
+    <div id="map" style="width: 100%; height: 100%"></div>
+ 
+
+    <script>
+        var map = L.map('map').setView([0, 0], 3);
+        L.tileLayer('albumsbig/{z}/{x}/{y}.png', {
+            minZoom: 0,
+            maxZoom: 6,
+            attribution: '',
+            tms: true
+        }).addTo(map);
+
+        $(document).ready(function() {
+          $('h1').slideUp(9000);
+        });
+
+    </script>
+
+    <h1 style="position:absolute;z-index:9999;top:50px;left:50px;font-size:100px;" class="tk-lobster">One good thing about music, when it hits you, you feel no pain.</h1>
+</body>
+</html>
